@@ -1,7 +1,7 @@
 <template>
   <section>
     <div class="transaction">
-      <h1>Transaction</h1>
+      <h3>Transaction</h3>
     </div>
   </section>
 </template>
