@@ -1,5 +1,6 @@
 <template>
-  <q-drawer v-model="isSidebarOpen" show-if-above side="left" :width="200" bordered class="sidebar-transparent">
+  <q-drawer v-model="isSidebarOpen" show-if-above side="left" :width="200" class="sidebar-transparent"
+    style="background: #181818;">
     <q-scroll-area class="fit q-pa-sm">
       <q-list class="column">
         <template v-for="(menuItem, index) in menuList" :key="index">
@@ -29,21 +30,21 @@ const menuList = ref([
 ]);
 </script>
 
-<style scoped>
+<style>
 .sidebar-transparent {
-  background-color: transparent;
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  background: #181818 !important;
+  box-shadow: none !important;
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .sidebar-item {
   width: 100%;
   border-radius: 8px;
   transition: background 0.3s ease-in-out;
+  color: white;
 }
 
 .sidebar-item:hover {
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.1);
 }
 </style>
