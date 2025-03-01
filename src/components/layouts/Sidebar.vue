@@ -1,17 +1,15 @@
 <template>
-  <q-drawer v-model="isSidebarOpen" show-if-above side="left" :width="200" class="sidebar-transparent"
-    style="background: #181818;">
-    <q-scroll-area class="fit q-pa-sm">
-      <q-list class="column">
+  <q-drawer v-model="isSidebarOpen" show-if-above side="left" class="sidebar-transparent full-height">
+    <q-scroll-area class="fit">
+      <q-list>
         <template v-for="(menuItem, index) in menuList" :key="index">
-          <q-item clickable v-ripple :active="menuItem.label === 'Dashboard'" class="q-my-xs sidebar-item"
-            :to="menuItem.to">
+          <q-item clickable v-ripple :to="menuItem.to" class="sidebar-item">
             <q-item-section avatar>
-              <q-icon :name="menuItem.icon" size="20px" />
+              <q-icon :name="menuItem.icon" size="22px" />
             </q-item-section>
             <q-item-section>{{ menuItem.label }}</q-item-section>
           </q-item>
-          <q-separator v-if="menuItem.separator" :key="'sep' + index" spaced />
+          <q-separator v-if="menuItem.separator" />
         </template>
       </q-list>
     </q-scroll-area>
@@ -32,16 +30,15 @@ const menuList = ref([
 
 <style>
 .sidebar-transparent {
-  background: #181818 !important;
-  box-shadow: none !important;
+  width: 260px;
+  background: #181818;
   border-right: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .sidebar-item {
-  width: 100%;
   border-radius: 8px;
-  transition: background 0.3s ease-in-out;
   color: white;
+  transition: background 0.3s ease-in-out;
 }
 
 .sidebar-item:hover {
