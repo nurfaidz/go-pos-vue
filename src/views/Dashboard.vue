@@ -49,7 +49,6 @@ const transactions = ref([
   min-width: 200px;
   max-width: 320px;
   padding: 16px;
-  text-align: center;
   border-radius: 12px;
   box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.4);
   background-color: #252323;
@@ -58,7 +57,8 @@ const transactions = ref([
 .card-content {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 25px;
+  justify-content: start;
 }
 
 .summary-info {

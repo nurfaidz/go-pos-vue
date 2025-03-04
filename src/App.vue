@@ -48,10 +48,30 @@ body {
 .content-container {
   width: 100%;
   min-height: 100%;
-  display: flex;
   flex-direction: column;
   justify-content: start;
   align-items: center;
   box-sizing: border-box;
+}
+
+.table-quasar {
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+}
+</style>
+
+<style>
+.q-btn:hover {
+  background-color: #388e3c !important;
+}
+
+.q-btn {
+  background-color: #4caf50 !important;
+  color: #fff !important;
+  border-radius: 6px;
+  padding: 8px 16px;
+  font-size: 14px;
+  transition: 0.3s ease-in-out;
 }
 </style>
