@@ -30,7 +30,7 @@ const menuList = ref([
 
 <style>
 .sidebar-transparent {
-  width: 260px;
+  width: 180px;
   background: #181818;
   border-right: 1px solid rgba(255, 255, 255, 0.1);
 }
